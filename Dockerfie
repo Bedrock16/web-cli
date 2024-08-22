@@ -1,0 +1,6 @@
+FROM debian:12.6
+RUN apt update && \
+    apt upgrade && \
+    apt install -y shellinabox systemd neofetch wget
+RUN echo 'root:bedrock16' | chpasswd
+EXPOSE 8080
